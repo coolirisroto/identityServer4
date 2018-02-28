@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{6254D32F-9A70-4421-B7B2-C0967A937E63}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestApp/Configurations/ProfileService.cs">
+    <Files>
+      <File FileName="TestApp/Startup.cs" Line="30" Column="118" />
+      <File FileName="TestApp/Config.cs" Line="32" Column="32" />
+      <File FileName="TestApp/Program.cs" Line="18" Column="10" />
+      <File FileName="TestApp/Configurations/ResourceOwnerPasswordValidator.cs" Line="24" Column="47" />
+      <File FileName="TestApp/models/User.cs" Line="10" Column="49" />
+      <File FileName="TestApp/Configurations/ProfileService.cs" Line="17" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TestApp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

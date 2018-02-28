@@ -1,0 +1,11 @@
+/Users/koco/Projects/TestApp/TestApp/bin/Debug/netcoreapp2.0/Configurations.deps.json
+/Users/koco/Projects/TestApp/TestApp/bin/Debug/netcoreapp2.0/Configurations.runtimeconfig.json
+/Users/koco/Projects/TestApp/TestApp/bin/Debug/netcoreapp2.0/Configurations.runtimeconfig.dev.json
+/Users/koco/Projects/TestApp/TestApp/bin/Debug/netcoreapp2.0/Configurations.dll
+/Users/koco/Projects/TestApp/TestApp/bin/Debug/netcoreapp2.0/Configurations.pdb
+/Users/koco/Projects/TestApp/TestApp/obj/Debug/netcoreapp2.0/Configurations.csprojResolveAssemblyReference.cache
+/Users/koco/Projects/TestApp/TestApp/obj/Debug/netcoreapp2.0/Configurations.csproj.CoreCompileInputs.cache
+/Users/koco/Projects/TestApp/TestApp/obj/Debug/netcoreapp2.0/Configurations.AssemblyInfoInputs.cache
+/Users/koco/Projects/TestApp/TestApp/obj/Debug/netcoreapp2.0/Configurations.AssemblyInfo.cs
+/Users/koco/Projects/TestApp/TestApp/obj/Debug/netcoreapp2.0/Configurations.dll
+/Users/koco/Projects/TestApp/TestApp/obj/Debug/netcoreapp2.0/Configurations.pdb

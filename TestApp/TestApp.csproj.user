@@ -4,4 +4,10 @@
     <StartAction>Project</StartAction>
     <ApplicationURL>http://localhost:5000/</ApplicationURL>
   </PropertyGroup>
+  <PropertyGroup>
+    <ActiveDebugProfile>TestApp</ActiveDebugProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
 </Project>

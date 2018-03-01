@@ -102,7 +102,7 @@ namespace TestApp
                                 Id = "ro.client",
                                 ClientId ="ro.client",
                                 ClientName = "mvc",
-                            AllowedGrantTypes =  new List<ClientGrantType> { new ClientGrantType { GrantType = GrantType.AuthorizationCode } },
+                            AllowedGrantTypes =  new List<ClientGrantType> { new ClientGrantType { GrantType = GrantType.ResourceOwnerPassword } },
                                 //AllowedCorsOrigins =  new List<ClientCorsOrigin>  {new ClientCorsOrigin { Origin = "http://localhost" } },
                                 RequireClientSecret = true,
                                 ClientSecrets = new List<ClientSecret> { new ClientSecret { Value = "secret".Sha256() }  },

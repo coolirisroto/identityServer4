@@ -28,8 +28,8 @@ namespace TestApp
 
         //public IConfiguration Configuration { get; }
 
-        private const string connection = "host=localhost;database=IdentityServer;user id=postgres; Password=cooliris";
-
+        private const string connection = "host=54.165.58.27;database=identity_server;user id=postgres; Password=";
+           
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {

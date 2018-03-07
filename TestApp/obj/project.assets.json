@@ -12961,13 +12961,13 @@
       "projectName": "TestApp",
       "projectPath": "/Users/koco/Projects/TestApp/TestApp/TestApp.csproj",
       "packagesPath": "/Users/koco/.nuget/packages/",
-      "outputPath": "/Users/koco/Projects/TestApp/TestApp/obj",
+      "outputPath": "/Users/koco/Projects/TestApp/TestApp/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/koco/.config/NuGet/NuGet.Config"
+        "/Users/koco/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -12989,27 +12989,26 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
+          "Dapper": {
             "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
-          },
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "2.0.0"
+            "version": "[1.50.4, )"
           },
           "IdentityServer4": {
             "target": "Package",
-            "version": "2.1.2"
+            "version": "[2.1.2, )"
           },
           "IdentityServer4.Postgresql": {
             "target": "Package",
-            "version": "2.0.5"
+            "version": "[2.0.5, )"
           },
-          "Dapper": {
+          "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "1.50.4"
+            "version": "[2.0.0, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           }
         },
         "imports": [

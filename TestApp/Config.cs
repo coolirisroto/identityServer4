@@ -11,7 +11,7 @@ namespace TestApp
 {
     public class Config
     {
-        4
+        
         // clients want to access resources (aka scopes)
         public static IEnumerable<Client> GetClients()
         {

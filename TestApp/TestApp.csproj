@@ -29,4 +29,7 @@
     <Folder Include="Configurations\" />
     <Folder Include="models\" />
   </ItemGroup>
+<PropertyGroup>
+  <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
+</PropertyGroup>
 </Project>

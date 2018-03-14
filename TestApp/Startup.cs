@@ -76,7 +76,8 @@ namespace TestApp
                 if (!session.Query<Foo.ApiResource>().Any())
                 {
                     var resources = new List<Foo.ApiResource> {
-                     new Foo.ApiResource{ Name = "api1" , Description = "Api" , DisplayName ="api1" , Scopes = new List<ApiScope> { new ApiScope { Name = "api1" , DisplayName ="api1"  } } },
+                        new Foo.ApiResource{ Name = "resorts" , Description = "Api Resorts" , DisplayName ="Api Resorts" , Scopes = new List<ApiScope> { new ApiScope { Name = "resorts" , DisplayName ="Api Resorts"  } } },
+                        new Foo.ApiResource{ Name = "residences" , Description = "Api Residences" , DisplayName ="Api Residences" , Scopes = new List<ApiScope> { new ApiScope { Name = "residences" , DisplayName ="Api Residences"  } } }
 
                     };
                     session.StoreObjects(resources);
@@ -113,9 +114,26 @@ namespace TestApp
                                      new ClientScope { Scope ="api1" }
                                 },
                                 RedirectUris = new List<ClientRedirectUri> { new ClientRedirectUri { RedirectUri ="http://localhost:5003/signin-oidc" }}
-                                }
-
-                            
+                            },
+                        new Foo.Client
+                            {
+                              AllowOfflineAccess = true,
+                                Id = "addonis",
+                                ClientId ="addonis",
+                                ClientName = "Addonis",
+                            AllowedGrantTypes =  new List<ClientGrantType> { new ClientGrantType { GrantType = GrantType.ClientCredentials } },
+                                //AllowedCorsOrigins =  new List<ClientCorsOrigin>  {new ClientCorsOrigin { Origin = "http://localhost" } },
+                                RequireClientSecret = true,
+                                ClientSecrets = new List<ClientSecret> { new ClientSecret { Value = "secret".Sha256() }  },
+                                RequireConsent = false,
+                                AllowedScopes = new List<ClientScope>{
+                                     new ClientScope { Scope = IdentityServer4.IdentityServerConstants.StandardScopes.OpenId },
+                                     new ClientScope { Scope = IdentityServer4.IdentityServerConstants.StandardScopes.Profile },
+                                     new ClientScope { Scope ="residences" },
+                                     new ClientScope { Scope ="resorts" }
+                                },
+                                RedirectUris = new List<ClientRedirectUri> { new ClientRedirectUri { RedirectUri ="http://localhost:5003/signin-oidc" }}
+                            }
 
                         };
                     session.StoreObjects(clients);

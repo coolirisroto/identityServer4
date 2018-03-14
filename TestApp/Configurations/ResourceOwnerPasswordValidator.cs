@@ -28,17 +28,31 @@ namespace TestApp.Configurations
 
 
             User user = new User();
-            using (var conn = OpenConnection("Server=localhost;database=IdentityServer;user id=postgres; Password=cooliris"))
+            var submittedPassword = context.Password;
+            using (var conn = OpenConnection("Server=54.172.56.232;database=users;user id=postgres; Password=stagingusr"))
             {
+                
+                //var hashedPassword = BCrypt.Net.BCrypt.HashPassword(submittedPassword);
 
-                user = conn.Query<User>("SELECT * from public.user WHERE USERNAME=@UserName and PASSWORD=@Pass",
+                //Debug.WriteLine(submittedPassword);
+
+                //7Debug.WriteLine(hashedPassword);
+
+                //Debug.WriteLine(validPassword);
+
+                user = conn.Query<User>("SELECT * from public.user WHERE USERNAME=@UserName",
                           new { UserName = context.UserName, Pass = context.Password }).SingleOrDefault<User>();
+                //user = conn.Query<User>("SELECT * from public.user WHERE USERNAME=@UserName and PASSWORD=@Pass",
+                //          new { UserName = context.UserName, Pass = context.Password }).SingleOrDefault<User>();                
             }
             if (user == null)
             {
                 context.Result = new GrantValidationResult(TokenRequestErrors.InvalidRequest, "Username or password incorrect");
                 return Task.FromResult(0);
             }
+            bool validPassword = BCrypt.Net.BCrypt.Verify(submittedPassword, user.Password);
+            Debug.WriteLine(validPassword);
+
 
             context.Result = new GrantValidationResult(user.Id.ToString(), "password");
             return Task.FromResult(0);
